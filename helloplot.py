@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import pyarrow
 
 # Read the CSV file
 atlantic_cases = pd.read_csv("Datasets/13100775.csv")

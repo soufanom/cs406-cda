@@ -26,12 +26,12 @@ def set_operations():
 
 # Define a function to showcase dictionary operations
 def dictionary_operations():
-    my_dict = {'a': 1, 'b': 2, 'c': 3}
+    my_dict = {'Othman': 12, 'Osama': 22, 'Lojain': 32}
     print("Original Dictionary:", my_dict)
-    my_dict['d'] = 4  # Add a new key-value pair
-    print("After adding {'d': 4}:", my_dict)
-    del my_dict['b']  # Remove key-value pair 'b'
-    print("After deleting 'b':", my_dict)
+    my_dict['Othman'] = 4  # Add a new key-value pair
+    print("After adding {'Othman': 4}:", my_dict)
+    del my_dict['Osama']  # Remove key-value pair 'b'
+    print("After deleting 'Osama':", my_dict)
     print("Keys:", list(my_dict.keys()))
     print("Values:", list(my_dict.values()))
 

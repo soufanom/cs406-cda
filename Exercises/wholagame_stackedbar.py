@@ -4,6 +4,8 @@ from palmerpenguins import load_penguins
 
 penguins = load_penguins()
 
+print(penguins.head())
+
 # Generating counts of gender for each island
 penguins_counts = penguins.groupby(['island', 'species']).size().unstack(fill_value=0)
 

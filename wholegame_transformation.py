@@ -52,5 +52,6 @@ penguins['flipper_length_mm'] = penguins['flipper_length_mm'].fillna(average_fli
 
 # Assuming 'df' is your DataFrame
 # Fill missing values in each column with that column's average
+print(penguins['body_mass_g'])
 df = penguins.apply(lambda x: x.fillna(x.mean()) if x.dtype.kind in 'biufc' else x)
 print(df['body_mass_g'])

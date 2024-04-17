@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-mpg = pd.read_csv("datasets/mpg.csv")
+mpg = pd.read_csv("../datasets/mpg.csv")
 
 plt.figure(figsize=(12, 6))
 

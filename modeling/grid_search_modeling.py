@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 sim1 = pd.read_csv("../datasets/sim1.csv")
 
 models = pd.DataFrame({
-    'a1': np.random.uniform(-20, 40, 250),
-    'a2': np.random.uniform(-5, 5, 250)
+    'a1': np.linspace(-20, 20, 1050),
+    'a2': np.linspace(1, 3, 1050)
 })
 
 # I need to find which model is the best?!

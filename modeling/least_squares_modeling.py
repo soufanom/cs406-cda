@@ -10,6 +10,9 @@ sim1 = pd.read_csv("../datasets/sim1.csv")
 # Define and fit the linear model using patsy formula
 model = smf.ols('y ~ x', data=sim1).fit()
 
+print(model.summary())
+exit(1)
+
 # Retrieve the coefficients
 coefficients = model.params
 

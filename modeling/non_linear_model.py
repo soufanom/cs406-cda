@@ -11,6 +11,7 @@ sim2 = pd.read_csv("../datasets/sim2.csv")
 sim2['x2'] = sim2['x'] ** 2
 sim2['x3'] = sim2['x'] ** 3
 sim2['x4'] = sim2['x'] ** 4
+model_quadratic = smf.ols('y ~ x2', data=sim2).fit()
 model1 = smf.ols('y ~ x + x2 + x3 + x4', data=sim2).fit()
 
 # ploting
@@ -22,7 +23,9 @@ min = sim2['x'].min()
 max = sim2['x'].max()
 x_range = np.linspace(min, max, 100)
 predictions = model1.predict(exog=dict(x=x_range, x2 = x_range ** 2, x3 = x_range ** 3, x4 = x_range ** 4))
+predictions_quad = model_quadratic.predict(exog=dict(x2 = x_range ** 2))
 
+ax.plot(x_range, predictions_quad, color='orange')
 ax.plot(x_range, predictions, color='red')
 
 ax.set_xlabel('x - independent variable')
